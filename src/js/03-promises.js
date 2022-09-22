@@ -8,15 +8,15 @@ function onStart(event) {
   event.preventDefault();
 
   const { delay, step, amount } = event.currentTarget.elements;
-  let delayStap = Number(delay.value);
+  let delayStep = Number(delay.value);
 
   for (let i = 1; i <= amount.value; i += 1) {
     if (i === 1) {
-      getResultPromise(i, delayStap);
+      getResultPromise(i, delayStep);
     } else {
-      delayStap += Number(step.value);
+      delayStep += Number(step.value);
 
-      getResultPromise(i, delayStap);
+      getResultPromise(i, delayStep);
     }
   }
 }
